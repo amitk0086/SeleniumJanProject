@@ -12,6 +12,7 @@
   
     <classes>
       <class name="com.Banking.TestCases.LoginTest"/>
+      <class name="com.Banking.TestCases.LoginTest1"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
