@@ -15,7 +15,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 import com.Banking.Utilities.ReadConfig;
@@ -34,7 +36,7 @@ public class BaseClass {
 	Logger logger;
 	
 	@Parameters("browser")
-	@BeforeClass
+	@BeforeMethod
 	public void setup(String br)
 	{
 		if(br.equals("chrome"))
@@ -61,7 +63,7 @@ public class BaseClass {
 		PropertyConfigurator.configure("log4j.properties");
 	}
 	
-	@AfterClass
+	@AfterMethod
 	public void tearDown()
 	{
 		driver.quit();
